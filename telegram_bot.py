@@ -5,10 +5,10 @@ import time
 import asyncio
 
 async def scrape_website():
-    url = "https://www.bbc.com/news"
+    url = "https://www.moh.gov.et/site/articles-3-col?page=0"
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
-    headings = soup.find_all("h3", class_="gs-c-promo-heading__title")
+    headings = soup.find_all("p")
     return [heading.text.strip() for heading in headings]
 
 async def send_message_to_bot(bot, chat_id, message):
