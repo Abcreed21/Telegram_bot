@@ -36,7 +36,7 @@ The process is repeated every hour to keep your Telegram channel up to date with
 To run the script, simply execute the Python file. For example:
 
 ```bash
-python your_script_file.py
+python .py
 ```
 
 The script will start fetching data and sending it to your Telegram channel.
